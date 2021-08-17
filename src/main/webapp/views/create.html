@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h3>Create Music</h3>
+<form th:action="@{create}" th:object="${list}" method="post" nctype="multipart/form-data"
+      enctype="multipart/form-data">
+  <table class="table">
+    <tbody>
+    <tr>
+      <td>ID:</td>
+      <td><input placeholder="nhập nameBaiHat" th:field="*{nameBaiHat}"></td>
+      <td>Name:</td>
+      <td><input placeholder="nhập nameNgheSy" th:field="*{nameNgheSy}"></td>
+      <td>price:</td>
+      <td><input placeholder="nhập theLoai" th:field="*{theLoai}"></td>
+      <td>Music:</td>
+      <td>
+        <input type="file" name="uppMusic">
+      </td>
+
+    </tbody>
+  </table>
+  <button type="submit" class="btn btn-success">Create</button>
+</form>
+</body>
+</html>
